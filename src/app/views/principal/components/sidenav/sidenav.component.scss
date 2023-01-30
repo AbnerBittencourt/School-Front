@@ -1,0 +1,67 @@
+:host ::ng-deep {
+    .side-item {
+        a {
+            @apply flex items-center text-md pt-3 pb-3 pl-0 transition-3s my-1 mx-0 text-text font-normal;
+
+            mat-icon {
+                @apply font-normal text-base ml-4 md:ml-2;
+            }
+        }
+
+        & > a:hover {
+            @apply bg-secondary;
+        }
+
+        & > a.active {
+            @apply bg-secondary text-white relative;
+
+            &::before {
+                @apply absolute content-[""] w-[5px] h-full bg-primary;
+            }
+
+            .drop-icon {
+                @apply transform rotate-90;
+            }
+        }
+
+        & > .mat-expanded .drop-icon {
+            @apply transform rotate-90;
+        }
+
+        & > .mat-expanded a {
+            @apply bg-secondary text-white border-l-4 border-primary;
+        }
+    }
+
+    mat-icon {
+        @apply min-w-[3rem] flex justify-center items-center mr-[6px];
+    }
+
+    .drop-icon {
+        @apply ml-auto transition duration-300 mr-6 #{!important};
+    }
+
+    .drop-menu {
+        @apply pl-4 transition duration-300;
+
+        a {
+            @apply cursor-pointer hover:text-white;
+        }
+    }
+
+    .mat-expansion-panel {
+        @apply my-2 mx-0 bg-accent rounded-none text-text;
+
+        &:not([class*="mat-elevation-z"]) {
+            box-shadow: none !important;
+        }
+
+        .mat-expansion-panel-header {
+            padding: 0 !important;
+
+            .mat-expansion-indicator {
+                @apply hidden;
+            }
+        }
+    }
+}

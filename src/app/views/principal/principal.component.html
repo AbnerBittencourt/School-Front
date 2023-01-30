@@ -1,0 +1,30 @@
+<input type="checkbox" id="sidebar-toggle">
+
+<section class="sidenav">
+    <div class="logo">
+        <h3>F</h3>
+        <span>Fainor</span>
+    </div>
+
+    <div class="side-menu">
+        <sidenav></sidenav>
+    </div>
+</section>
+
+<section class="content">
+    <nav class="nav">
+        <label for="sidebar-toggle" class="nav-menu">
+            <mat-icon>menu</mat-icon>
+        </label>
+
+        <div class="nav-data">
+            <app-navbar></app-navbar>
+        </div>
+    </nav>
+
+    <main class="main">
+        <router-outlet></router-outlet>
+    </main>
+</section>
+
+<label for="sidebar-toggle" class="body-label"></label>

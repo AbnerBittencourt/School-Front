@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply font-main;
+}
+
+html,
+body {
+    @apply h-full;
+}
+
+body {
+    @apply text-text text-sm bg-body;
+}
+
+::-webkit-scrollbar {
+    @apply w-[.4rem] h-[.4rem] rounded bg-gray-400 dark:bg-gray-500;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply rounded bg-gray-600 dark:bg-gray-800;
+}

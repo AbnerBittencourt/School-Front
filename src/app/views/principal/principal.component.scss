@@ -1,0 +1,91 @@
+:host ::ng-deep {
+    #sidebar-toggle {
+        @apply hidden;
+    }
+
+    .body-label {
+        @apply fixed h-full w-content z-30 -right-full top-0;
+    }
+
+    #sidebar-toggle:checked {
+        & ~ .sidenav {
+            @apply left-0 w-[260px] lg:w-[60px];
+
+            .side-menu {
+                @apply py-0 md:px-[6px] max:px-4;
+            }
+
+            app-logo .logo {
+                @apply justify-start;
+            }
+
+            .side-item mat-icon {
+                @apply ml-0;
+            }
+        }
+
+        & ~ .content {
+            @apply ml-[60px] md:ml-[260px] lg:ml-[60px];
+
+            .nav {
+                @apply left-0 w-full right-0;
+            }
+        }
+
+        & ~ .body-label {
+            @apply right-0;
+        }
+    }
+
+    .sidenav {
+        @apply fixed lg:w-[260px] h-screen top-0 left-0 bg-accent overflow-y-auto no-scrollbar transition duration-300 md:w-[60px] w-full z-30 max:-left-full;
+    }
+
+    .side-menu {
+        @apply relative mt-6 pb-2 pt-0 flex flex-col justify-between h-[90vh] transition duration-300;
+    }
+
+    .mat-content {
+        display: initial !important;
+    }
+
+    .logo {
+        @apply flex items-center pl-4 pt-8 pb-4;
+
+        h3 {
+            @apply h-4 w-4 p-4 mr-3 bg-primary rounded flex items-center justify-center text-white text-2xl font-bold;
+        }
+
+        span {
+            @apply uppercase text-base text-white ml-2 font-bold;
+        }
+    }
+
+    /** Nav **/
+
+    .nav {
+        @apply bg-white shadow flex h-16 py-0 px-5 items-center gap-7 justify-between z-20 lg:left-[260px] left-0 w-full;
+    }
+
+    .nav-menu {
+        @apply text-xl cursor-pointer text-accent;
+    }
+
+    .nav-data {
+        @apply flex items-center gap-5 mr-4;
+    }
+
+    .nav-divider {
+        @apply w-[1px] h-4 block bg-gray-300;
+    }
+
+    /** Content **/
+
+    .main {
+        @apply w-full pt-6 px-5 pb-5;
+    }
+
+    .content {
+        @apply ml-[60px] transition duration-300 lg:ml-[260px] max:ml-0;
+    }
+}

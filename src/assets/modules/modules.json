@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Principal",
+        "icon": "dashboard",
+        "routerLink": "/",
+        "enabled": true
+    },
+    {
+        "name": "Professores",
+        "icon": "group",
+        "routerLink": "/professores",
+        "enabled": true
+    },
+    {
+        "name": "Alunos",
+        "icon": "school",
+        "routerLink": "/alunos",
+        "enabled": true
+    },
+    {
+        "name": "Trabalhos",
+        "icon": "business_center",
+        "routerLink": "/trabalhos",
+        "enabled": true
+    },
+    {
+        "name": "Pages",
+        "icon": "pages",
+        "routerLink": "",
+        "enabled": false,
+        "childrens": [
+            {
+                "name": "Example 01",
+                "routerLink": "",
+                "enabled": true
+            },
+            {
+                "name": "Example 012",
+                "routerLink": "",
+                "enabled": true
+            }
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+<div>
+    <ul *ngFor="let item of modules">
+        <li class="side-item" *ngIf="item.enabled && !item.childrens">
+            <a class="side-link" routerLink="{{ item.routerLink }}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <mat-icon>{{ item.icon }}</mat-icon>
+                <span>{{ item.name }}</span>
+            </a>
+        </li>
+
+        <mat-expansion-panel class="side-item" *ngIf="item.enabled && item.childrens">
+            <mat-expansion-panel-header matRipple>
+                <a>
+                    <mat-icon class="side-icon">{{ item.icon }}</mat-icon>
+                    <span>{{ item.name }}</span>
+                    <mat-icon class="drop-icon">chevron_right</mat-icon>
+                </a>
+            </mat-expansion-panel-header>
+            <ul *ngIf="item.childrens" class="drop-menu">
+                <li *ngFor="let element of item.childrens">
+                    <a *ngIf="element.enabled" [routerLink]="element.routerLink">
+                        {{ element.name }}
+                    </a>
+                </li>
+            </ul>
+        </mat-expansion-panel>
+    </ul>
+</div>
