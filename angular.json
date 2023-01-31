@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "fainor-admin": {
+        "school-front": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -39,7 +39,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/fainor-admin",
+                        "outputPath": "dist/school-front",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -92,10 +92,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "fainor-admin:build:production"
+                            "browserTarget": "school-front:build:production"
                         },
                         "development": {
-                            "browserTarget": "fainor-admin:build:development"
+                            "browserTarget": "school-front:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -103,7 +103,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "fainor-admin:build"
+                        "browserTarget": "school-front:build"
                     }
                 },
                 "test": {
@@ -124,5 +124,8 @@
                 }
             }
         }
+    },
+    "cli": {
+      "analytics": "41dda2f8-540d-4a44-9f12-99947b0ac1b7"
     }
 }

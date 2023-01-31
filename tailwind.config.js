@@ -13,7 +13,7 @@ module.exports = {
                 main: ["Sen, sans-serif"],
             },
             colors: {
-                primary: "#E02535",
+                primary: "#ee8529",
                 alt: "#05877f",
                 accent: "#2A2A29",
                 secondary: "#383838",
