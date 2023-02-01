@@ -37,6 +37,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
 import { RouterModule } from "@angular/router";
+import { UIModule } from "./core/ui/ui.module";
 import { ModulesService } from "./services/module.service";
 
 const modules = [
@@ -45,6 +46,7 @@ const modules = [
     HttpClientModule,
     RouterModule,
     FlexLayoutModule,
+    UIModule,
 
     /* Material imports */
     MatExpansionModule,

@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { SharedModule } from 'app/shared.module';
 import { AlunoSearchRoutingModule } from './aluno-search-routing.module';
 import { AlunoSearchComponent } from './aluno-search.component';
 
-
-@NgModule({
-  declarations: [
+const components = [
     AlunoSearchComponent
-  ],
-  imports: [
-    CommonModule,
-    AlunoSearchRoutingModule
-  ]
+]
+@NgModule({
+  declarations: [...components ],
+  imports: [CommonModule, AlunoSearchRoutingModule, SharedModule],
+  exports: [...components]
 })
 export class AlunoSearchModule { }

@@ -1,0 +1,11 @@
+.header {
+    @apply inline-flex gap-x-2 items-center mb-8 mt-3;
+
+    h2 {
+        @apply text-2xl text-accent dark:text-white font-semibold;
+    }
+
+    mat-icon {
+        @apply text-3xl leading-7 text-accent align-middle dark:text-white;
+    }
+}

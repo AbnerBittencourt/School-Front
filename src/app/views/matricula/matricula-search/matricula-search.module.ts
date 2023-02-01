@@ -1,17 +1,17 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { SharedModule } from 'app/shared.module';
 import { MatriculaSearchRoutingModule } from './matricula-search-routing.module';
 import { MatriculaSearchComponent } from './matricula-search.component';
 
 
-@NgModule({
-  declarations: [
+const components = [
     MatriculaSearchComponent
-  ],
-  imports: [
-    CommonModule,
-    MatriculaSearchRoutingModule
-  ]
+]
+@NgModule({
+  declarations: [...components ],
+  imports: [CommonModule, MatriculaSearchRoutingModule, SharedModule],
+  exports: [...components]
 })
 export class MatriculaSearchModule { }

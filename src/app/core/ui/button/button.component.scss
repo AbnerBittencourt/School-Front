@@ -1,0 +1,31 @@
+:host {
+    @apply inline-block;
+
+    .btn {
+        @apply w-full inline-flex rounded transition-3s font-main justify-center items-center gap-x-2 cursor-pointer;
+
+        mat-icon {
+            @apply text-[1.2rem] leading-6;
+        }
+    }
+
+    &.btn-small button {
+        @apply h-[38px] px-4 md:px-6 font-normal text-base;
+    }
+
+    &.btn-normal button {
+        @apply h-[48px] px-4 md:px-6 text-lg font-normal;
+    }
+
+    &.btn-primary button {
+        @apply bg-primary text-white hover:bg-alt;
+    }
+
+    &.btn-warn button {
+        @apply bg-warn text-accent font-medium hover:bg-[#d4ac0d];
+    }
+
+    &.btn-default button {
+        @apply bg-default text-gray-700 font-medium hover:bg-[#B3B6B7];
+    }
+}

@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { SharedModule } from 'app/shared.module';
 import { CursoSearchRoutingModule } from './curso-search-routing.module';
 import { CursoSearchComponent } from './curso-search.component';
 
-
-@NgModule({
-  declarations: [
+const components = [
     CursoSearchComponent
-  ],
-  imports: [
-    CommonModule,
-    CursoSearchRoutingModule
-  ]
+]
+@NgModule({
+  declarations: [...components ],
+  imports: [CommonModule, CursoSearchRoutingModule, SharedModule],
+  exports: [...components]
 })
 export class CursoSearchModule { }
