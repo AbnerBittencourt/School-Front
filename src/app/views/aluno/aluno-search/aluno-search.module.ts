@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from 'app/shared.module';
 import { AlunoSearchRoutingModule } from './aluno-search-routing.module';
 import { AlunoSearchComponent } from './aluno-search.component';
+import { TableAlunoComponent } from './components/table-aluno/table-aluno.component';
 
 const components = [
-    AlunoSearchComponent
+    AlunoSearchComponent,
+    TableAlunoComponent
 ]
 @NgModule({
   declarations: [...components ],
