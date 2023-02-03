@@ -35,7 +35,7 @@ export class ButtonSalvarAlunoComponent implements OnInit {
                 this.formGroup.markAllAsTouched();
                 throw new Error('Campos obrigatórios inválidos');
             }
-            let aluno: Aluno = this.formGroup.value;
+            let aluno: Aluno = this.formGroup.getRawValue();
             await this._alunoService.save(aluno).subscribe(_ => {
                 this._snackBar.open("Aluno salvo com sucesso.", "OK", {
                     duration: 3000

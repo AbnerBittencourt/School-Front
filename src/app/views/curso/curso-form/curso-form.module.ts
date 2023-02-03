@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 
+import { SharedModule } from "app/shared.module";
 import { ButtonCancelarCursoComponent } from "./components/button-cancelar-curso/button-cancelar-curso.component";
 import { ButtonDeletarCursoComponent } from "./components/button-deletar-curso/button-deletar-curso.component";
 import { ButtonSalvarCursoComponent } from "./components/button-salvar-curso/button-salvar-curso.component";
@@ -19,6 +20,6 @@ const components = [
 ];
 @NgModule({
     declarations: [...components],
-    imports: [CommonModule, CursoFormRoutingModule],
+    imports: [CommonModule, CursoFormRoutingModule, SharedModule],
 })
 export class CursoFormModule {}

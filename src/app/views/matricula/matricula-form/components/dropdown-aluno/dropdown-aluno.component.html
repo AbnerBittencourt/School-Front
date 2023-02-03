@@ -1,1 +1,7 @@
-<p>dropdown-aluno works!</p>
+<mat-form-field fxFlex appearance="outline">
+    <mat-label>Aluno</mat-label>
+    <mat-select placeholder="Aluno" formControlName="id" required>
+        <mat-option>Selecione</mat-option>
+        <mat-option *ngFor="let aluno of alunos" [value]="aluno.id">{{ aluno.nome }}</mat-option>
+    </mat-select>
+</mat-form-field>

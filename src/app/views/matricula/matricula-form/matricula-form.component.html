@@ -1,1 +1,16 @@
-<p>matricula-form works!</p>
+<app-header icon="book" title="Gerenciar Matrícula"></app-header>
+
+<div [formGroup]="formGroup">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" formGroupName="aluno">
+        <app-dropdown-aluno fxFlex></app-dropdown-aluno>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" formGroupName="curso">
+        <app-dropdown-curso fxFlex></app-dropdown-curso>
+    </div>
+    <br>
+    <div fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+        <app-button-deletar-matricula></app-button-deletar-matricula>
+        <app-button-cancelar-matricula (click)="close()"></app-button-cancelar-matricula>
+        <app-button-salvar-matricula></app-button-salvar-matricula>
+    </div>
+</div>

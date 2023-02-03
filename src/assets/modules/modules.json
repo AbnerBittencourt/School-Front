@@ -1,11 +1,5 @@
 [
     {
-        "name": "Principal",
-        "icon": "dashboard",
-        "routerLink": "/",
-        "enabled": true
-    },
-    {
         "name": "Alunos",
         "icon": "group",
         "routerLink": "/alunos",

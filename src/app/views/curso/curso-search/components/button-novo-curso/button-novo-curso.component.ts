@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AlunoFormComponent } from 'app/views/aluno/aluno-form/aluno-form.component';
+import { CursoFormComponent } from 'app/views/curso/curso-form/curso-form.component';
 
 @Component({
-  selector: 'app-button-novo-aluno',
-  templateUrl: './button-novo-aluno.component.html',
-  styleUrls: ['./button-novo-aluno.component.scss']
+  selector: 'app-button-novo-curso',
+  templateUrl: './button-novo-curso.component.html',
+  styleUrls: ['./button-novo-curso.component.scss']
 })
-export class ButtonNovoAlunoComponent implements OnInit {
+export class ButtonNovoCursoComponent implements OnInit {
 
     constructor(
         private _dialog: MatDialog,
@@ -18,12 +18,12 @@ export class ButtonNovoAlunoComponent implements OnInit {
     ngOnInit(): void {}
 
     cadastrar() {
-        let dialogRef = this._dialog.open(AlunoFormComponent, {
+        let dialogRef = this._dialog.open(CursoFormComponent, {
             width: "35%"
         });
 
         dialogRef.afterClosed().subscribe((_) => {
-            this._router.navigate(["/alunos"]);
+            this._router.navigate(["/cursos"]);
         });
     }
 }
