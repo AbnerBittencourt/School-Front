@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatriculaDTO } from 'app/model/dto/matricula.dto';
+import { MatriculaService } from 'app/services/matricula.service';
+import { MatriculaFormComponent } from 'app/views/matricula/matricula-form/matricula-form.component';
 
 @Component({
   selector: 'app-table-matricula',
@@ -7,9 +12,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableMatriculaComponent implements OnInit {
 
-  constructor() { }
+    columns: string[] = ["aluno", "ementa"];
+    dataSource: MatTableDataSource<MatriculaDTO> = new MatTableDataSource<MatriculaDTO>();
 
-  ngOnInit(): void {
-  }
+    constructor(
+        private _matriculaService: MatriculaService,
+        private _dialog: MatDialog,
+    ) {}
+
+    ngOnInit() {
+        this.load();
+    }
+
+    async load() {
+        return await this._matriculaService.find().subscribe((r) => this.dataSource.data = r);
+    }
+
+    edit(row: MatriculaDTO){
+        this._dialog.open(MatriculaFormComponent, {
+            data: row,
+            width: "35%"
+        });
+    }
 
 }

@@ -34,6 +34,5 @@ export class TableCursoComponent implements OnInit {
             width: "35%"
         });
     }
-
 }
 

@@ -25,4 +25,8 @@ export class CursoController {
     update(entity: Curso) {
         return this.http.put<Curso>(`${environment.apiURL}curso/${entity.id}`, entity);
     }
+
+    delete(id: number) {
+        return this.http.delete<Curso>(`${environment.apiURL}curso/${id}`);
+    }
 }

@@ -25,4 +25,8 @@ export class AlunoController {
     update(entity: Aluno) {
         return this.http.put<Aluno>(`${environment.apiURL}aluno/${entity.id}`, entity);
     }
+
+    delete(id: number) {
+        return this.http.delete<Aluno>(`${environment.apiURL}aluno/${id}`);
+    }
 }

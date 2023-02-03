@@ -30,4 +30,8 @@ export class AlunoService {
 
         return this.update(entity);
     }
+
+    delete(id: number) {
+        return this.alunoController.delete(id);
+    }
 }

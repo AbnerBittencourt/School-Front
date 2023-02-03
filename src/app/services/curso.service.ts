@@ -30,4 +30,8 @@ export class CursoService {
 
         return this.update(entity);
     }
+
+    delete(id: number) {
+        return this.cursoController.delete(id);
+    }
 }
