@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { AlunoRoutingModule } from './aluno-routing.module';
 import { AlunoComponent } from './aluno.component';

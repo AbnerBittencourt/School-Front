@@ -1,1 +1,13 @@
-<p>aluno-form works!</p>
+<app-header icon="school" title="Gerenciar Aluno"></app-header>
+
+<div [formGroup]="formGroup">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <app-text-nome-aluno fxFlex></app-text-nome-aluno>
+    </div>
+    <br>
+    <div fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+        <app-button-deletar-aluno></app-button-deletar-aluno>
+        <app-button-cancelar-aluno (click)="close()"></app-button-cancelar-aluno>
+        <app-button-salvar-aluno></app-button-salvar-aluno>
+    </div>
+</div>

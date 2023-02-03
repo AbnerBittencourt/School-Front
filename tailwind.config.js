@@ -14,13 +14,13 @@ module.exports = {
             },
             colors: {
                 primary: "#ee8529",
-                alt: "#05877f",
+                alt: "#eab308",
                 accent: "#2A2A29",
                 secondary: "#383838",
                 text: "#666666",
                 body: "#f0f1f5",
                 "default": "#d2d3d4",
-                "warn": "#eab308",
+                "warn": "#e74c3c",
                 "danger": "#e74c3c",
 
             },
